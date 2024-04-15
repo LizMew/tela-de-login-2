@@ -1,0 +1,196 @@
+/* display: flex; define o layout como flexível.
+justify-content: center; centraliza os elementos horizontalmente.
+align-items: center; centraliza os elementos verticalmente.
+min-height: 100vh; garante que o conteúdo seja centralizado verticalmente na tela inteira, mesmo que o conteúdo seja menor que a altura da tela.
+margin: 0; remove as margens padrão do corpo da página, o que ajuda a garantir que o conteúdo seja centralizado corretamente. */
+
+body{
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgb(61, 61, 61) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    min-height: 100vh;
+}
+
+.formulario{
+    display: grid;
+    place-items: center;
+    position: relative;
+    width: 300px;
+    height: 600px;
+    padding: 25px;
+    background-color: #161616;
+    border-radius: 10px;
+}
+
+.corpo-do-formulario{
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    left: 25px;
+    width: 230px;
+    margin: -250px auto 0 auto;
+}
+
+.icone-do-texto{
+    max-width: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.texto-do-spotify{
+    text-align: left;
+    line-height: 1;
+}
+
+.texto-do-spotify-1{
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 20px;
+    font-family: "Nunito", sans-serif;
+    margin-left: 13%;
+    margin-top: -10%;
+}
+
+.texto-do-spotify-2{
+    color: #ffffff;
+    font-size:20px;
+    margin-top: 30px;
+    font-family: "Barlow", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.input-area{
+    margin-top: 120px;
+}
+
+.formulario-input{
+    padding: 11px 40px;
+    background: transparent;
+    border: 1px solid #e3e3e38a;
+    line-height: 1;
+    border-radius: 3px;
+}
+
+.formulario-input:focus{
+    border: 1px solid #00ff7f;
+    outline: none;
+}
+
+.formulario-input:first-child{
+    margin-bottom: 15px;
+}
+
+.formulario-input input{
+    width: 100%;
+    background: none;
+    font-size: 13.4px;
+    color: #00ff7f;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-family: "Barlow", sans-serif;
+}
+
+.formulario-input input::placeholder{
+    color: #adadad;
+}
+
+.formulario-input input:focus{
+    outline: none;
+}
+
+.botao-login{
+    margin-bottom: 200px;
+}
+
+.botao-envio{
+    width: 100%;
+    color: #00ff7f;
+    background-color: transparent;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 11px 90px;
+    border: 1px solid;
+    border-radius: 25px;
+    border-color: #00ff7f;
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;
+    font-family: "Barlow", sans-serif
+}
+
+/* 
+Quando você usa margin-bottom em um elemento, ele afeta o espaço entre esse elemento e o próximo elemento abaixo dele. No seu caso, ao aplicar margin-bottom: 60px; na classe .botao-login, você está criando um espaço de 60 pixels abaixo desse elemento. Se o elemento "Esqueceu a senha?" estiver abaixo do botão de login, esse espaço extra também será aplicado a ele.
+Para evitar que o margin-bottom da classe .botao-login afete o posicionamento do elemento "Esqueceu a senha?", você pode usar margin-top na classe .esqueceu-senha  */
+
+.botao-envio:hover{
+    transition: all ease-in-out;
+    background-color: #00ff7f;
+    color: #161616;
+    cursor: pointer;
+}
+
+.esqueceu-senha{
+    text-align: center;
+    display: flex;
+    margin-top: -350px;
+}
+
+.esqueceu-senha a{
+    color: #e3e3e3;
+    font-size: 14px;
+    font-family: "Barlow", sans-serif
+}
+
+.esqueceu-senha a:hover{
+    transition: all ease-in-out 0.3s;
+    color: #e3e3e3;
+    cursor: pointer;
+}
+
+.inscrever{
+    text-align: center;
+    font-size: 14px;
+    font-family: "Barlow", sans-serif;
+    margin-top: -300px;
+}
+
+.inscrever .pergunta{
+    color: #adadad;
+    margin-bottom: 7px;
+}
+
+.inscrever a{
+    color: #e3e3e3;
+}
+
+.barra{
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    width: 28px;
+    height: 8px;
+    margin-left: -33px;
+    background-color: #00ff7f;
+    border-radius: 10px;
+}
+
+.barra:before,.barra:after{
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #ececec;
+    border-radius: 50%;
+}
+
+.barra:before{
+    right: -20px;
+}
+
+.barra:after{
+    right: -38px;
+}
